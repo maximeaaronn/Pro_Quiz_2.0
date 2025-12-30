@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level {{niveau}}</title>
+    <link rel="stylesheet" href="../static/css/pt.css">
+</head>
+<body>
+    <div class="bloc">
+        <h1>#{{name}}</h1>
+        <h2>Niveau <b>{{niveau}}</b></h2>
+        <p>Question <b>{{question_number}}</b> : {{question["question"]}}</p>
+        <h3>Choix : </h3>
+        <form method="POST" id="Formget">
+            {% for option in question["options"] %}
+                <label>
+                   <input type="checkbox" name="option" value="{{option}}" class="choice">{{option}}<br>
+                </label>
+            {% endfor %}
+            <button type="button" id="btn">VALIDER</button>
+        </form>
+
+    </div>
+    <script src="../static/js/pt.js"></script>
+</body>
+</html>

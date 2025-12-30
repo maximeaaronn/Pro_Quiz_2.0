@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lose Level {{niveau}}</title>
+    <link rel="stylesheet" href="../static/css/lose.css">
+</head>
+<body>
+    <div class="bloc">
+        <img src="../static/images/imagept1.png">
+        <div class="part"><img src="../static/images/lose.png"></div>
+        <h4>Oups! Niveau <b>{{niveau}}</b> non validé : score <b>{{score}}/{{total}}</b> est insuffisant (minimun <b>{{mini}}</b>)</h4>
+        <div class="part2">
+             <a href="{{url_for('pt3')}}" id="btn"><button type="button">Réessayer</button></a>
+        </div>
+    </div>
+    <script src="../static/js/lose.js"></script>
+</body>
+</html>
